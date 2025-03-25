@@ -37,7 +37,7 @@ public class MoodAdaptiveEnvironment : MonoBehaviour
 
     void UpdateEnvironment()
     {
-        bool isIntense = currentSpeed > speedThreshold || enemiesDefeatedRecently > 3;
+        bool isIntense = currentSpeed >= speedThreshold || enemiesDefeatedRecently > 3;
 
         directionalLight.color = isIntense ? Color.gray : Color.yellow;
 
